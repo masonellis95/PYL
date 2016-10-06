@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.gameBoard = new System.Windows.Forms.GroupBox();
+            this.endGameButton = new System.Windows.Forms.Button();
             this.spinButton = new System.Windows.Forms.Button();
             this.questionText = new System.Windows.Forms.Label();
             this.passOrSpinTextBox = new System.Windows.Forms.TextBox();
@@ -90,7 +91,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.instructLabel = new System.Windows.Forms.Label();
-            this.endGameButton = new System.Windows.Forms.Button();
             this.gameBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
@@ -189,6 +189,19 @@
             this.gameBoard.Size = new System.Drawing.Size(911, 705);
             this.gameBoard.TabIndex = 0;
             this.gameBoard.TabStop = false;
+            // 
+            // endGameButton
+            // 
+            this.endGameButton.BackColor = System.Drawing.Color.Red;
+            this.endGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endGameButton.ForeColor = System.Drawing.Color.Lime;
+            this.endGameButton.Location = new System.Drawing.Point(720, 566);
+            this.endGameButton.Name = "endGameButton";
+            this.endGameButton.Size = new System.Drawing.Size(140, 93);
+            this.endGameButton.TabIndex = 46;
+            this.endGameButton.Text = "End Game";
+            this.endGameButton.UseVisualStyleBackColor = false;
+            this.endGameButton.Click += new System.EventHandler(this.endGameButton_Click);
             // 
             // spinButton
             // 
@@ -798,7 +811,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(958, 66);
+            this.label3.Size = new System.Drawing.Size(968, 66);
             this.label3.TabIndex = 7;
             this.label3.Text = "3. The game begins with a trivia round. Whoever buzzes in first will have \r\nan op" +
     "portunity to answer the question on the board. Buzz in with keys 1-3!";
@@ -838,20 +851,7 @@
             this.instructLabel.Text = "Instructions:";
             this.instructLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // endGameButton
-            // 
-            this.endGameButton.BackColor = System.Drawing.Color.Red;
-            this.endGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endGameButton.ForeColor = System.Drawing.Color.Lime;
-            this.endGameButton.Location = new System.Drawing.Point(720, 566);
-            this.endGameButton.Name = "endGameButton";
-            this.endGameButton.Size = new System.Drawing.Size(140, 93);
-            this.endGameButton.TabIndex = 46;
-            this.endGameButton.Text = "End Game";
-            this.endGameButton.UseVisualStyleBackColor = false;
-            this.endGameButton.Click += new System.EventHandler(this.endGameButton_Click);
-            // 
-            // gameForm
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -861,8 +861,8 @@
             this.Controls.Add(this.gameBoard);
             this.Controls.Add(this.instrucGroupBx);
             this.KeyPreview = true;
-            this.Name = "gameForm";
-            this.Text = "Form1";
+            this.Name = "GameForm";
+            this.Text = "Press Your Luck";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gameForm_KeyPress);
             this.gameBoard.ResumeLayout(false);
             this.gameBoard.PerformLayout();
